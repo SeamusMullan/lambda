@@ -1,5 +1,5 @@
 {
-  description = "vista — dmenu-style wallpaper switcher with thumbnails (SDL2, feh)";
+  description = "vista — dmenu-style wallpaper switcher with thumbnails (SDL3, feh)";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 

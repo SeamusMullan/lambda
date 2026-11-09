@@ -51,7 +51,7 @@ After step 6, `rebuild` (alias for `nh os switch`) does it with a diff.
 |------|----|
 | Retheme | edit `theme/half-life.yaml` → `rebuild` |
 | New wallpaper | drop in `theme/wallpapers/` (or `~/Pictures/Wallpapers/`) → `Super+Shift+W` |
-| Hack on Vista without pushing | `sudo nixos-rebuild switch --flake . --override-input vista path:$HOME/GitHub/vista` |
+| Hack on Vista without pushing | `sudo nixos-rebuild switch --flake . --override-input vista path:/path/to/vista` — a checkout the **VM** can see (UTM shared folder of `~/Coding/Personal`, or a clone in the VM) |
 | Update everything | `nix flake update && rebuild` |
 | Update one input | `nix flake update vista` |
 | Add an app | new file in `modules/home/`, add to `modules/home/default.nix`. Colours: `config.lib.stylix.colors.withHashtag.base0D` |
@@ -64,7 +64,7 @@ After step 6, `rebuild` (alias for `nh os switch`) does it with a diff.
 | `Super+Return` | kitty |
 | `Super+D` | launcher |
 | `Super+B` | Firefox |
-| `Super+Shift+W` | Vista |
+| `Super+Shift+W` | Vista · `Super+Ctrl+W` roulette |
 | `Super+Shift+S` | region screenshot → clipboard |
 | `Super+H/J/K/L` | focus · `+Shift` move |
 | `Super+1–0` | workspace · `+Shift` move window |
@@ -76,6 +76,7 @@ After step 6, `rebuild` (alias for `nh os switch`) does it with a diff.
 
 Full `system.build.toplevel` evaluation passes against nixpkgs `f4a03c0` (nixos-unstable, 2026-11-07), home-manager `2c0c1f0`, Stylix `3e27b6c`.
 Checked outputs: i3 focused border `#ff9f43`, i3 font Inter, kitty font JetBrainsMono NF, GTK adw-gtk3, cursor Bibata, Chromium `BrowserThemeColor #0a0a0a`, Vista config rendered with scheme hex.
+Vista: `vista-flake/` evaluated against the real `SeamusMullan/vista` tree → SDL3 3.4 / SDL3_image / SDL3_ttf / OpenSSL / GLEW from nixpkgs, submodules unused.
 Not verified here: `stylix.targets.firefox.colorTheme` (pulls the Firefox Color extension via NUR — fine on your VM, unreachable from the sandbox).
 
 ## TODO markers

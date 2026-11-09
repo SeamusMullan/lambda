@@ -66,6 +66,7 @@ in
         "${mod}+d" = "exec ${launcher}";
         "${mod}+b" = "exec ${browser}";
         "${mod}+Shift+w" = "exec ${wallpaperPicker}";
+        "${mod}+Ctrl+w" = "exec ${wallpaperPicker} -r"; # roulette mode
         "${mod}+Shift+s" = "exec --no-startup-id ${screenshot}";
         "${mod}+Shift+q" = "kill";
 

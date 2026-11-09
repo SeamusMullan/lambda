@@ -15,8 +15,9 @@
     };
 
     # Your software. Each repo ships its own flake.nix exposing packages.default.
-    # While hacking locally:
-    #   sudo nixos-rebuild switch --flake . --override-input vista path:$HOME/GitHub/vista
+    # While hacking locally, point at a checkout the VM can see (UTM shared folder of
+    # ~/Coding/Personal on the Mac, or a clone inside the VM):
+    #   sudo nixos-rebuild switch --flake . --override-input vista path:/path/to/vista
     vista = {
       url = "github:SeamusMullan/vista"; # TODO confirm owner/repo
       inputs.nixpkgs.follows = "nixpkgs";
