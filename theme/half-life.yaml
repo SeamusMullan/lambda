@@ -1,0 +1,25 @@
+# Half-Life — black & orange base16 scheme for Lambda.
+# base16 slot meanings (what Stylix maps them to):
+#   base00 bg · base01 lighter bg (bars, status) · base02 selection · base03 comments/inactive
+#   base04 dim fg · base05 fg · base06/07 bright fg
+#   base08 red · base09 orange · base0A yellow · base0B green · base0C cyan
+#   base0D PRIMARY ACCENT (i3 focused border, links, polybar underline) · base0E purple-slot · base0F brown
+# Preview after a rebuild: /etc/stylix/palette.html
+scheme: "Half-Life"
+author: "Carrrot"
+base00: "0A0A0A"
+base01: "161616"
+base02: "262626"
+base03: "4A4A4A"
+base04: "8A8A8A"
+base05: "D8D8D8"
+base06: "E8E8E8"
+base07: "F5F5F5"
+base08: "E04B2E" # red
+base09: "FF7A00" # λ orange
+base0A: "FFB454" # amber
+base0B: "A9B665" # HEV olive
+base0C: "7FB5A8" # muted cyan
+base0D: "FF9F43" # primary accent
+base0E: "C9743C" # rust
+base0F: "8C5A3C" # brown
